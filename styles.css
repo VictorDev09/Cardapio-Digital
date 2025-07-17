@@ -206,3 +206,11 @@
     margin-left: 10px;
     background-color: #d4a76a !important;
 }
+
+
+/* tamanho para telas maiores que 1025px — 1200px deixando centralizado as divs */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .menu-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
