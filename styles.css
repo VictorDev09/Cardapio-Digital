@@ -1,0 +1,208 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #f9f3e9;
+            color: #5a3e2a;
+        }
+
+        header {
+            background-color: #6b4226;
+            color: #f9f3e9;
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .sacola {
+  position: fixed;
+            top: 9px;
+            right: 20px;
+            width: 40px; 
+            height: 40px;
+            background-color: rgb(222, 222, 205);
+            border-radius: 20%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;      
+        }
+
+        .item-count{
+            position: fixed;
+            top: 21px;
+            right: 33px;
+            background-color: #bd7209;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 0.8rem;
+             z-index: 1000;      
+
+        }
+
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .menu-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            color: #6b4226;
+            border-bottom: 2px solid #d4a76a;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item-details {
+            padding: 1.5rem;
+        }
+
+        .item-name {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #6b4226;
+        }
+
+        .item-description {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .item-price {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #d4a76a;
+        }
+
+        footer {
+            background-color: #7d736c;
+            color: #f9f3e9;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        .link-wpp {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-wpp:hover {
+            background-color: #128C7E;
+        }
+        
+        .insta {
+            display: inline-block;
+            background-color: rgb(174, 66, 174);
+            color: white;
+            margin-top: 10px;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .insta:hover {
+            background-color: rgb(147, 34, 147);
+        }
+
+        .rodape {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #f9f3e9;
+        }
+
+
+        .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #6b4226;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.quantity-controls button:hover {
+    background-color: #5a3e2a;
+}
+
+.quantity-display {
+    min-width: 20px;
+    text-align: center;
+}
+
+.adicionar-carrinho {
+    margin-left: 10px;
+    background-color: #d4a76a !important;
+}
