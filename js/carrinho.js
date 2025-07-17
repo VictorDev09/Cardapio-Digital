@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let total = 0;
 
         carrinho.forEach(produto => {
-            mensagem += `🍫- ${produto.nome} (x${produto.quantidade})\n`;
+            mensagem += ` 🍫- ${produto.nome} (x${produto.quantidade})\n`;
             total += produto.preco * produto.quantidade;
         });
 
