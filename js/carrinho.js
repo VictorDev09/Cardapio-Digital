@@ -106,16 +106,21 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        let mensagem = '📋 Seu Pedido:\n\n';
+        let mensagem = '📋 Seu Pedido:\n';
         let total = 0;
+
+        mensagem += `\n📦 Total de itens: ${carrinho.length}\n\n`;
+
 
         carrinho.forEach(produto => {
             mensagem += ` 🍫- ${produto.nome} (x${produto.quantidade})\n`;
             total += produto.preco * produto.quantidade;
         });
-
         mensagem += `\nTotal: R$ ${total.toFixed(2)}`;
-        mensagem += `\n\n👉 Deseja finalizar o pedido agora?`;
+        mensagem += `\n💰Formas de pagamento: Pix (mandar comprovante) | Cartão de Crédito(somente aproximação) | Dinheiro\n`;
+        mensagem += `\n(Informe o endereço)\n`;
+
+        mensagem += `\n👉 Deseja finalizar o pedido agora?`;
 
         if (confirm(mensagem)) {
             const textoPedido = encodeURIComponent(mensagem.replace('📋 Seu Pedido:\n\n', '').replace('\n\n👉 Deseja finalizar o pedido agora?', ''));
