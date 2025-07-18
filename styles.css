@@ -207,6 +207,12 @@
     background-color: #d4a76a !important;
 }
 
+.produto[data-status="false"] {
+  display: none;
+  opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
 
 /* tamanho para telas maiores que 1025px — 1200px deixando centralizado as divs */
 @media (min-width: 1025px) and (max-width: 1200px) {

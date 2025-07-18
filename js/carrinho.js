@@ -88,6 +88,13 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Carrinho limpo!');
     });
 
+    function inicializarCarrinho() {
+        document.querySelectorAll('.adicionar-carrinho').forEach(botao => {
+            botao.addEventListener('click', function () {
+            });
+        });
+    }
+
 
 
     sacola.addEventListener('click', function (e) {
@@ -109,7 +116,8 @@ document.addEventListener('DOMContentLoaded', function () {
         let mensagem = '📋 Seu Pedido:\n';
         let total = 0;
 
-        mensagem += `\n📦 Total de itens: ${carrinho.length}\n\n`;
+        mensagem += `\n📦 Total de itens: ${carrinho.length}\n`;
+        mensagem += `(Verificar Disponibilidade de Estoque)\n\n`;
 
 
         carrinho.forEach(produto => {
