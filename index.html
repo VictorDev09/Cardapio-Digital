@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Cardápio de Trufas</title>
+    <title>Trufas do Frazão</title>
 </head>
 
 <body>
@@ -26,15 +26,15 @@
 
     <div class="container">
         <section class="menu-section">
-
             <div class="produtos">
-                <h2 class="section-title">Trufas Clássicas</h2>
-                <div class="menu-items">
-                    <div class="menu-item">
+                <div class="menu-item">
+                    <h2 class="section-title">Trufas Clássicas</h2>
+                    <div id="produtos-classicos-container" class="menu-items">
                         <div class="item-image" style="background-image: url('./Imagens/TrufasTradicionais.png');">
                         </div>
                         <div class="item-details">
-                            <div class="produto" data-id="01" data-nome="Brigadeiro" data-preco="5.00">
+                            <div class="produto" data-id="1" data-nome="Brigadeiro" data-preco="5.00"
+                                data-status="true">
                                 <h3 class="item-name">Brigadeiro</h3>
                                 <p class="item-description">trufa caseira de brigadeiro, feita com chocolate 50%
                                     cacau
@@ -51,200 +51,212 @@
                                     <button class="adicionar-carrinho">Adicionar</button>
                                     <br><br><br><br>
                                 </div>
-                                <div class="produto" data-id="02" data-nome="Ninho" data-preco="5.00">
-                                    <h3 class="item-name"> Ninho</h3>
-                                    <p class="item-description">Trufa irresistível com mousse de Ninho e chocolate
-                                        ao
-                                        leite,
-                                        cremosa
-                                        e derrete na boca. A cobertura de leite em pó
-                                        garante um toque doce e aveludado. Um clássico que conquista paladares!</p>
-                                    <div class="quantity-controls">
-                                        <button class="decrease-quantity">-</button>
-                                        <span class="quantity-display">1</span>
-                                        <button class="increase-quantity">+</button>
-                                        <button class="adicionar-carrinho">Adicionar</button>
-                                        <br><br><br><br>
-                                    </div>
-                                    <div class="produto" data-id="03" data-nome="Dois Amores" data-preco="5.00">
-                                        <h3 class="item-name">Dois Amores</h3>
-                                        <p class="item-description">A fusão perfeita de dois clássicos
-                                            irresistíveis!
-                                            Trufa com
-                                            camada
-                                            dupla: núcleo cremoso de brigadeiro tradicional
-                                            (chocolate + leite condensado) e envolto por uma mousse suave de Ninho.
-                                        </p>
-                                        <div class="quantity-controls">
-                                            <button class="decrease-quantity">-</button>
-                                            <span class="quantity-display">1</span>
-                                            <button class="increase-quantity">+</button>
-                                            <button class="adicionar-carrinho">Adicionar</button>
-                                            <br><br><br><br>
-                                        </div>
-                                        <div class="produto" data-id="04" data-nome="Prestigio" data-preco="5.00">
-                                            <h3 class="item-name"> Prestigio</h3>
-                                            <p class="item-description">Trufa artesanal com mousse de coco 100%
-                                                natural,
-                                                cremosa e
-                                                intensamente aromática. Elaborada sem chocolate branco,
-                                                destacando o sabor fresco e tropical do coco. Finalizada com coco
-                                                ralado
-                                                para
-                                                crocância e apresentação rústica.
-                                                Perfeita para quem busca sabores autênticos!</p>
-                                            <div class="quantity-controls">
-                                                <button class="decrease-quantity">-</button>
-                                                <span class="quantity-display">1</span>
-                                                <button class="increase-quantity">+</button>
-                                                <button class="adicionar-carrinho">Adicionar</button>
-                                                <br><br><br><br>
-                                            </div>
-                                            <div class="produto" data-id="05" data-nome="Sensação" data-preco="5.00">
-                                                <h3 class="item-name"> Sensação</h3>
-                                                <p class="item-description">o clássico que lembra infância! Textura
-                                                    macia e sabor
-                                                    irresistível
-                                                    de chocolate maltado,Simples, viciante e cheia de nostalgia!</p>
-                                                <div class="quantity-controls">
-                                                    <button class="decrease-quantity">-</button>
-                                                    <span class="quantity-display">1</span>
-                                                    <button class="increase-quantity">+</button>
-                                                    <button class="adicionar-carrinho">Adicionar</button>
-                                                    <br><br><br><br>
-                                                </div>
-                                                <p class="item-price">R$ 5,00 (unidade)</p>
-                                            </div>
-                                        </div>
-
-
-
-                                        <h2 class="section-title">Trufas de Chocolate Branco</h2>
-                                        <div class="menu-item">
-                                            <div class="item-image"
-                                                style="background-image: url('./Imagens/TrufasBrancas.png');">
-                                            </div>
-
-                                            <div class="item-details">
-                                                <div class="produto" data-id="06" data-nome="Ouro Branco"
-                                                    data-preco="6.00">
-                                                    <h3 class="item-name">Ouro Branco</h3>
-                                                    <p class="item-description">Indulgência suprema! Trufa de
-                                                        chocolate
-                                                        branco cremoso com
-                                                        núcleo de
-                                                        brigadeiro de leite condensado, envolta em uma fina
-                                                        casca crocante de chocolate branco. Texturas que derretem e
-                                                        crispam, num contraste
-                                                        de
-                                                        luxo.
-                                                    </p>
-                                                    <div class="quantity-controls">
-                                                        <button class="decrease-quantity">-</button>
-                                                        <span class="quantity-display">1</span>
-                                                        <button class="increase-quantity">+</button>
-                                                        <button class="adicionar-carrinho">Adicionar</button>
-                                                        <br><br><br><br>
-                                                    </div>
-                                                    <div class="produto" data-id="07" data-nome="Confete"
-                                                        data-preco="6.00">
-                                                        <h3 class="item-name">Confete</h3>
-                                                        <p class="item-description">Diversão em cada mordida! Trufa
-                                                            de
-                                                            chocolate branco cremoso
-                                                            com
-                                                            recheio de brigadeiro de leite condensado recheado com
-                                                            M&M's coloridos, que derretem e surpreendem no paladar.
-                                                            Finalizada com mais confetes
-                                                            de
-                                                            chocolate por fora para um
-                                                            visual festivo. Ideal para quem ama texturas crocantes e
-                                                            sabores lúdicos!
-                                                        </p>
-                                                        <div class="quantity-controls">
-                                                            <button class="decrease-quantity">-</button>
-                                                            <span class="quantity-display">1</span>
-                                                            <button class="increase-quantity">+</button>
-                                                            <button class="adicionar-carrinho">Adicionar</button>
-                                                            <br><br><br><br>
-                                                        </div>
-                                                        <p class="item-price">R$ 6,00 (unidade)</p>
-                                                    </div>
-                                                </div>
-
-
-
-                                                <h2 class="section-title">Trufas de Frutas</h2>
-                                                <div class="menu-item">
-                                                    <div class="item-image"
-                                                        style="background-image: url('./Imagens/TrufasDeFrutas.png');">
-                                                    </div>
-                                                    <div class="item-details">
-                                                        <div class="produto" data-id="08" data-nome="Maracujá"
-                                                            data-preco="6.00">
-                                                            <h3 class="item-name">Maracujá</h3>
-                                                            <p class="item-description">Delicada trufa de mousse de
-                                                                maracujá natural com sementes
-                                                                crocantes,
-                                                                envolta em uma camada fina de chocolate ao leite
-                                                                cremoso. O contraste entre a acidez vibrante da
-                                                                fruta e
-                                                                a doçura suave do chocolate
-                                                                cria
-                                                                um
-                                                                equilíbrio perfeito.</p>
-                                                            <div class="quantity-controls">
-                                                                <button class="decrease-quantity">-</button>
-                                                                <span class="quantity-display">1</span>
-                                                                <button class="increase-quantity">+</button>
-                                                                <button class="adicionar-carrinho">Adicionar</button>
-                                                                <br><br><br>
-                                                            </div>
-                                                            <div class="produto" data-id="09" data-nome="Limão"
-                                                                data-preco="6.00">
-                                                                <h3 class="item-name">Limão</h3>
-                                                                <p class="item-description">Delicada trufa de mousse
-                                                                    de
-                                                                    limão siciliano fresca e
-                                                                    vibrante,
-                                                                    com
-                                                                    raspas da casca para intensificar o aroma
-                                                                    cítrico.
-                                                                    Envolta em uma fina camada de chocolate ao leite
-                                                                    para equilibrar a
-                                                                    acidez, finalizada com raspas de
-                                                                    limão.</p>
-                                                                <div class="quantity-controls">
-                                                                    <button class="decrease-quantity">-</button>
-                                                                    <span class="quantity-display">1</span>
-                                                                    <button class="increase-quantity">+</button>
-                                                                    <button
-                                                                        class="adicionar-carrinho">Adicionar</button>
-                                                                    <br><br><br><br>
-                                                                </div>
-                                                                <p class="item-price">R$ 6,00 (unidade)</p>
-                                                            </div>
-                                                        </div>
-
-
-
-                                                    </div>
-        </section>
-
-        <section class="menu-section">
-            <h2 class="section-title">Trufas Especiais</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-image" style="background-image: url('./Imagens/Especiais.png');">
+                            </div>
+                            <div class="produto" data-id="2" data-nome="Ninho" data-preco="5.00" data-status="true">
+                                <h3 class="item-name"> Ninho</h3>
+                                <p class="item-description">Trufa irresistível com mousse de Ninho e chocolate
+                                    ao
+                                    leite,
+                                    cremosa
+                                    e derrete na boca. A cobertura de leite em pó
+                                    garante um toque doce e aveludado. Um clássico que conquista paladares!</p>
+                                <div class="quantity-controls">
+                                    <button class="decrease-quantity">-</button>
+                                    <span class="quantity-display">1</span>
+                                    <button class="increase-quantity">+</button>
+                                    <button class="adicionar-carrinho">Adicionar</button>
+                                    <br><br><br><br>
+                                </div>
+                            </div>
+                            <div class="produto" data-id="3" data-nome="Dois Amores" data-preco="5.00"
+                                data-status="true">
+                                <h3 class="item-name">Dois Amores</h3>
+                                <p class="item-description">A fusão perfeita de dois clássicos
+                                    irresistíveis!
+                                    Trufa com
+                                    camada
+                                    dupla: núcleo cremoso de brigadeiro tradicional
+                                    (chocolate + leite condensado) e envolto por uma mousse suave de Ninho.
+                                </p>
+                                <div class="quantity-controls">
+                                    <button class="decrease-quantity">-</button>
+                                    <span class="quantity-display">1</span>
+                                    <button class="increase-quantity">+</button>
+                                    <button class="adicionar-carrinho">Adicionar</button>
+                                    <br><br><br><br>
+                                </div>
+                            </div>
+                            <div class="produto" data-id="4" data-nome="Prestigio" data-preco="5.00" data-status="true">
+                                <h3 class="item-name"> Prestigio</h3>
+                                <p class="item-description">Trufa artesanal com mousse de coco 100%
+                                    natural,
+                                    cremosa e
+                                    intensamente aromática. Elaborada sem chocolate branco,
+                                    destacando o sabor fresco e tropical do coco. Finalizada com coco
+                                    ralado
+                                    para
+                                    crocância e apresentação rústica.
+                                    Perfeita para quem busca sabores autênticos!</p>
+                                <div class="quantity-controls">
+                                    <button class="decrease-quantity">-</button>
+                                    <span class="quantity-display">1</span>
+                                    <button class="increase-quantity">+</button>
+                                    <button class="adicionar-carrinho">Adicionar</button>
+                                    <br><br><br><br>
+                                </div>
+                            </div>
+                            <div class="produto" data-id="5" data-nome="Sensação" data-preco="5.00" data-status="true">
+                                <h3 class="item-name"> Sensação</h3>
+                                <p class="item-description">o clássico que lembra infância! Textura
+                                    macia e sabor
+                                    irresistível
+                                    de chocolate maltado,Simples, viciante e cheia de nostalgia!</p>
+                                <div class="quantity-controls">
+                                    <button class="decrease-quantity">-</button>
+                                    <span class="quantity-display">1</span>
+                                    <button class="increase-quantity">+</button>
+                                    <button class="adicionar-carrinho">Adicionar</button>
+                                    <br><br><br><br>
+                                </div>
+                                <p class="item-price">R$ 5,00 (unidade)</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="item-details">
-                        <div class="produto" data-id="10" data-nome="Oreo" data-preco="8.00">
-                            <h3 class="item-name">Oreo</h3>
-                            <p class="item-description">Indulgência cremosa e crocante! Trufa feita com mousse de Oreo
-                                triturado, envolvida em uma camada de
-                                chocolate ao leite para equilibrar a doçura. Finalizada com pedaços de biscoito Oreo por
-                                fora para um
-                                toque crunchy e visual irresistível.
+        </section>
+        <section class="menu-section">
+            <div class="menu-item">
+                <h2 class="section-title">Trufas de Chocolate Branco</h2>
+                <div id="produtos-brancos-container" class="menu-items"></div>
+                <div class="item-image" style="background-image: url('./Imagens/TrufasBrancas.png');">
+                </div>
+
+                <div class="item-details">
+                    <div class="produto" data-id="6" data-nome="Ouro Branco" data-preco="6.00" data-status="true">
+                        <h3 class="item-name">Ouro Branco</h3>
+                        <p class="item-description">Indulgência suprema! Trufa de
+                            chocolate
+                            branco cremoso com
+                            núcleo de
+                            brigadeiro de leite condensado, envolta em uma fina
+                            casca crocante de chocolate branco. Texturas que derretem e
+                            crispam, num contraste
+                            de
+                            luxo.
+                        </p>
+                        <div class="quantity-controls">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="increase-quantity">+</button>
+                            <button class="adicionar-carrinho">Adicionar</button>
+                            <br><br><br><br>
+                        </div>
+                    </div>
+                    <div class="produto" data-id="7" data-nome="Confete" data-preco="6.00" data-status="true">
+                        <h3 class="item-name">Confete</h3>
+                        <p class="item-description">Diversão em cada mordida! Trufa
+                            de
+                            chocolate branco cremoso
+                            com
+                            recheio de brigadeiro de leite condensado recheado com
+                            M&M's coloridos, que derretem e surpreendem no paladar.
+                            Finalizada com mais confetes
+                            de
+                            chocolate por fora para um
+                            visual festivo. Ideal para quem ama texturas crocantes e
+                            sabores lúdicos!
+                        </p>
+                        <div class="quantity-controls">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="increase-quantity">+</button>
+                            <button class="adicionar-carrinho">Adicionar</button>
+                            <br><br><br><br>
+                        </div>
+                        <p class="item-price">R$ 6,00 (unidade)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class="menu-section">
+            <div class="menu-item">
+                <h2 class="section-title">Trufas de Frutas</h2>
+                <div id="produtos-fruta-container" class="menu-items"></div>
+                <div class="item-image" style="background-image: url('./Imagens/TrufasDeFrutas.png');">
+                </div>
+                <div class="item-details">
+                    <div class="produto" data-id="8" data-nome="Maracujá" data-preco="6.00" data-status="true">
+                        <h3 class="item-name">Maracujá</h3>
+                        <p class="item-description">Delicada trufa de mousse de
+                            maracujá natural com sementes
+                            crocantes,
+                            envolta em uma camada fina de chocolate ao leite
+                            cremoso. O contraste entre a acidez vibrante da
+                            fruta e
+                            a doçura suave do chocolate
+                            cria
+                            um
+                            equilíbrio perfeito.</p>
+                        <div class="quantity-controls">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="increase-quantity">+</button>
+                            <button class="adicionar-carrinho">Adicionar</button>
+                            <br><br><br>
+                        </div>
+                        <div class="produto" data-id="9" data-nome="Limão" data-preco="6.00" data-status="true">
+                            <h3 class="item-name">Limão</h3>
+                            <p class="item-description">Delicada trufa de mousse
+                                de
+                                limão siciliano fresca e
+                                vibrante,
+                                com
+                                raspas da casca para intensificar o aroma
+                                cítrico.
+                                Envolta em uma fina camada de chocolate ao leite
+                                para equilibrar a
+                                acidez, finalizada com raspas de
+                                limão.</p>
+                            <div class="quantity-controls">
+                                <button class="decrease-quantity">-</button>
+                                <span class="quantity-display">1</span>
+                                <button class="increase-quantity">+</button>
+                                <button class="adicionar-carrinho">Adicionar</button>
+                                <br><br><br><br>
+                            </div>
+                            <p class="item-price">R$ 6,00 (unidade)</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <br>
+        <section class="menu-section">
+            <div class="menu-item">
+                <h2 class="section-title">Trufas Especiais</h2>
+                <div id="produtos-especiais-container" class="menu-items"></div>
+                <div class="item-image" style="background-image: url('./Imagens/Especiais.png');">
+                </div>
+                <div class="item-details">
+                    <div class="produto" data-id="10" data-nome="Oreo" data-preco="8.00" data-status="true">
+                        <h3 class="item-name">Oreo</h3>
+                        <p class="item-description">Indulgência cremosa e crocante! Trufa feita com mousse de Oreo
+                            triturado, envolvida em uma camada de
+                            chocolate ao leite para equilibrar a doçura. Finalizada com pedaços de biscoito Oreo por
+                            fora para um
+                            toque crunchy e visual irresistível.
+                        </p>
+                        <div class="quantity-controls">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="increase-quantity">+</button>
+                            <button class="adicionar-carrinho">Adicionar</button>
+                            <br><br><br>
+                        </div>
+                        <div class="produto" data-id="11" data-nome="Napolitano" data-preco="8.00" data-status="true">
+                            <h3 class="item-name">Napolitano</h3>
+                            <p class="item-description">A tríade perfeita em uma trufa! Camadas distintas de
+                                brigadeiro
+                                cremoso, mousse de Ninho e recheio de Sensação, harmonizadas em um único bite.
                             </p>
                             <div class="quantity-controls">
                                 <button class="decrease-quantity">-</button>
@@ -253,11 +265,13 @@
                                 <button class="adicionar-carrinho">Adicionar</button>
                                 <br><br><br>
                             </div>
-                            <div class="produto" data-id="11" data-nome="Napolitano" data-preco="8.00">
-                                <h3 class="item-name">Napolitano</h3>
-                                <p class="item-description">A tríade perfeita em uma trufa! Camadas distintas de
+                            <div class="produto" data-id="12" data-nome="Café" data-preco="8.00" data-status="true">
+                                <h3 class="item-name">Café</h3>
+                                <p class="item-description">Para os amantes de um sabor intenso e sofisticado! Trufa
+                                    com
                                     brigadeiro
-                                    cremoso, mousse de Ninho e recheio de Sensação, harmonizadas em um único bite.
+                                    cremoso de café, envolvida em uma camada de
+                                    chocolate ao leite.
                                 </p>
                                 <div class="quantity-controls">
                                     <button class="decrease-quantity">-</button>
@@ -266,56 +280,45 @@
                                     <button class="adicionar-carrinho">Adicionar</button>
                                     <br><br><br>
                                 </div>
-                                <div class="produto" data-id="12" data-nome="Café" data-preco="8.00">
-                                    <h3 class="item-name">Café</h3>
-                                    <p class="item-description">Para os amantes de um sabor intenso e sofisticado! Trufa
-                                        com
-                                        brigadeiro
-                                        cremoso de café, envolvida em uma camada de
-                                        chocolate ao leite.
+                                <div class="produto" data-id="13" data-nome="Menta" data-preco="8.00"
+                                    data-status="true">
+
+                                    <h3 class="item-name">Menta</h3>
+                                    <p class="item-description">Refrescante e irresistível! Trufa de mousse de menta
+                                        suave e
+                                        aromática, envolta em uma camada de chocolate meio amargo para equilibrar o
+                                        frescor.
                                     </p>
                                     <div class="quantity-controls">
                                         <button class="decrease-quantity">-</button>
                                         <span class="quantity-display">1</span>
                                         <button class="increase-quantity">+</button>
                                         <button class="adicionar-carrinho">Adicionar</button>
-                                        <br><br><br>
+                                        <br><br><br><br>
                                     </div>
-                                    <div class="produto" data-id="13" data-nome="Menta" data-preco="8.00">
-
-                                        <h3 class="item-name">Menta</h3>
-                                        <p class="item-description">Refrescante e irresistível! Trufa de mousse de menta
-                                            suave e
-                                            aromática, envolta em uma camada de chocolate meio amargo para equilibrar o
-                                            frescor.
+                                    <div class="produto" data-id="14" data-nome="Paçoca" data-preco="8.00"
+                                        data-status="true">
+                                        <h3 class="item-name">Paçoca</h3>
+                                        <p class="item-description">A explosão de amendoim que todo mundo ama! Trufa
+                                            com
+                                            recheio de paçoca derretida em leite condensado.
                                         </p>
                                         <div class="quantity-controls">
                                             <button class="decrease-quantity">-</button>
                                             <span class="quantity-display">1</span>
                                             <button class="increase-quantity">+</button>
                                             <button class="adicionar-carrinho">Adicionar</button>
-                                            <br><br><br><br>
-                                        </div>
-                                        <div class="produto" data-id="14" data-nome="Paçoca" data-preco="8.00">
-                                            <h3 class="item-name">Paçoca</h3>
-                                            <p class="item-description">A explosão de amendoim que todo mundo ama! Trufa
-                                                com
-                                                recheio de paçoca derretida em leite condensado.
-                                            </p>
-                                            <div class="quantity-controls">
-                                                <button class="decrease-quantity">-</button>
-                                                <span class="quantity-display">1</span>
-                                                <button class="increase-quantity">+</button>
-                                                <button class="adicionar-carrinho">Adicionar</button>
-                                                <br><br><br>
-                                            </div><br>
-                                            <p class="item-price">R$ 8,00 (unidade)</p>
-                                        </div>
-                                        <div>
-                                        </div>
+                                            <br><br><br>
+                                        </div><br>
+                                        <p class="item-price">R$ 8,00 (unidade)</p>
                                     </div>
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </section>
-
     </div>
     </div>
     <footer>
@@ -332,7 +335,8 @@
         <p class="rodape">&copy; 2025 Trufas Caseiras - Todos os direitos reservados</p>
     </footer>
 
-    <script src="js/carrinho.js" type="module"></script>
+    <script src="./js/estoque.js"></script>
+    <script src="./js/carrinho.js"></script>
 
 </body>
 
