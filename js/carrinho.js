@@ -1,17 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const botoesAdicionar = document.querySelectorAll('.adicionar-carrinho');
+    const botaoAdicionarTodos = document.getElementById('adicionar-todos-carrinho');
     const contadorItens = document.querySelector('.item-count');
     const botaoLimparCarrinho = document.createElement('button');
     const sacola = document.querySelector('.sacola');
 
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-    let carrinho = [];
-
-    if (localStorage.getItem('carrinho')) {
-        carrinho = JSON.parse(localStorage.getItem('carrinho'));
-        atualizarContador();
-    }
-
+    // Configuração do botão limpar carrinho
     botaoLimparCarrinho.textContent = 'X';
     botaoLimparCarrinho.classList.add('limpar-carrinho');
     botaoLimparCarrinho.style.marginTop = '7px';
@@ -31,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     atualizarContador();
 
-
     document.querySelectorAll('.increase-quantity').forEach(button => {
         button.addEventListener('click', function () {
             const display = this.previousElementSibling;
@@ -43,59 +37,68 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             const display = this.nextElementSibling;
             let quantity = parseInt(display.textContent);
-            if (quantity > 1) {
+            if (quantity > 0) {
                 display.textContent = quantity - 1;
             }
         });
     });
 
-    botoesAdicionar.forEach(botao => {
-        botao.addEventListener('click', function () {
-            const produtoElemento = this.closest('.produto');
-            const quantity = parseInt(this.parentNode.querySelector('.quantity-display').textContent);
+    botaoAdicionarTodos.addEventListener('click', function () {
+        const produtos = document.querySelectorAll('.produto');
+        let adicionouAlgo = false;
 
-            const produto = {
-                id: produtoElemento.dataset.id,
-                nome: produtoElemento.dataset.nome,
-                preco: parseFloat(produtoElemento.dataset.preco),
-                quantidade: quantity
-            };
+        produtos.forEach(produtoElemento => {
+            const quantity = parseInt(produtoElemento.querySelector('.quantity-display').textContent);
+            const id = produtoElemento.dataset.id;
 
-            const produtoExistente = carrinho.findIndex(item => item.id === produto.id);
+            if (quantity > 0) {
+                if (!verificarDisponibilidadeNoEstoque(id, quantity)) {
+                    alert(`Desculpe, o produto ${produtoElemento.dataset.nome} não tem estoque suficiente!`);
+                    return;
+                }
 
-            if (produtoExistente !== -1) {
-                carrinho[produtoExistente].quantidade += quantity;
-            } else {
-                carrinho.push(produto);
+                const produto = {
+                    id: id,
+                    nome: produtoElemento.dataset.nome,
+                    preco: parseFloat(produtoElemento.dataset.preco),
+                    quantidade: quantity
+                };
+
+                const produtoExistente = carrinho.findIndex(item => item.id === produto.id);
+
+                if (produtoExistente !== -1) {
+                    carrinho[produtoExistente].quantidade += quantity;
+                } else {
+                    carrinho.push(produto);
+                }
+
+                produtoElemento.querySelector('.quantity-display').textContent = '0';
+                adicionouAlgo = true;
             }
+        });
 
+        if (adicionouAlgo) {
             localStorage.setItem('carrinho', JSON.stringify(carrinho));
             atualizarContador();
 
-            this.textContent = '✔ Adicionado!';
+            // Feedback visual
+            const originalText = this.textContent;
+            this.textContent = '✔ Itens Adicionados!';
             setTimeout(() => {
-                this.textContent = 'Adicionar';
-                this.parentNode.querySelector('.quantity-display').textContent = '1';
+                this.textContent = originalText;
             }, 1500);
-        });
-
+        } else {
+            alert('Selecione a quantidade de pelo menos um produto!');
+        }
     });
 
     botaoLimparCarrinho.addEventListener('click', function () {
-        carrinho = [];
-        localStorage.removeItem('carrinho');
-        atualizarContador();
-        alert('Carrinho limpo!');
+        if (confirm('Tem certeza que deseja limpar o carrinho?')) {
+            carrinho = [];
+            localStorage.removeItem('carrinho');
+            atualizarContador();
+        }
     });
-
-    function inicializarCarrinho() {
-        document.querySelectorAll('.adicionar-carrinho').forEach(botao => {
-            botao.addEventListener('click', function () {
-            });
-        });
-    }
-
-
 
     sacola.addEventListener('click', function (e) {
         e.preventDefault();
@@ -113,29 +116,34 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        let mensagem = '📋 Seu Pedido:\n';
+        let mensagem = '📋 Seu Pedido:\n\n';
         let total = 0;
 
-        mensagem += `\n📦 Total de itens: ${carrinho.length}\n`;
-        mensagem += `(Verificar Disponibilidade de Estoque)\n\n`;
-
-
         carrinho.forEach(produto => {
-            mensagem += ` 🍫- ${produto.nome} (x${produto.quantidade})\n`;
+            const produtoEstoque = estoque.getProduto(produto.id);
+            const disponivel = produtoEstoque ? produtoEstoque.Estoque >= produto.quantidade : false;
+
+            mensagem += ` 🍫- ${produto.nome} (x${produto.quantidade}) - R$ ${(produto.preco * produto.quantidade).toFixed(2)}`;
+            mensagem += disponivel ? ' ✅ Disponível\n' : ' ⚠️ Verificar disponibilidade\n';
             total += produto.preco * produto.quantidade;
         });
-        mensagem += `\nTotal: R$ ${total.toFixed(2)}`;
-        mensagem += `\n💰Formas de pagamento: Pix (mandar comprovante) | Cartão de Crédito(somente aproximação) | Dinheiro\n`;
-        mensagem += `\n(Informe o endereço)\n`;
 
-        mensagem += `\n👉 Deseja finalizar o pedido agora?`;
+        mensagem += `\n💰 Total: R$ ${total.toFixed(2)}`;
+        mensagem += `\n\nFormas de pagamento: Pix (mandar comprovante) | Cartão (somente aproximação) | Dinheiro`;
+        mensagem += `\n\n(Informe o endereço)`;
+        mensagem += `\n\n👉 Deseja finalizar o pedido agora?`;
 
         if (confirm(mensagem)) {
-            const textoPedido = encodeURIComponent(mensagem.replace('📋 Seu Pedido:\n\n', '').replace('\n\n👉 Deseja finalizar o pedido agora?', ''));
+            carrinho.forEach(produto => {
+                decrementarEstoque(produto.id, produto.quantidade);
+            });
+
+            const textoPedido = encodeURIComponent(mensagem.replace('👉 Deseja finalizar o pedido agora?', ''));
             window.open(`https://wa.me/5534988336859?text=Olá! Gostaria de encomendar:\n${textoPedido}`, '_blank');
+
+            carrinho = [];
+            localStorage.removeItem('carrinho');
+            atualizarContador();
         }
-
     }
-
-}
-);
+});

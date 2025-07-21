@@ -202,9 +202,11 @@
     text-align: center;
 }
 
-.adicionar-carrinho {
+.adicionar-todos-carrinho {
     margin-left: 10px;
     background-color: #d4a76a !important;
+    width: 250px;
+    height: 50px;
 }
 
 .produto[data-status="false"] {
