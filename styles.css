@@ -13,6 +13,8 @@
         header {
             background-color: #6b4226;
             color: #f9f3e9;
+            border-radius: 10px;
+            border-style: dotted;
             text-align: center;
             padding: 2rem;
             margin-bottom: 2rem;
@@ -97,6 +99,7 @@
         .item-image {
             height: 200px;
             background-size: cover;
+            border-radius: 9px;
             background-position: center;
         }
 
@@ -124,6 +127,8 @@
         footer {
             background-color: #7d736c;
             color: #f9f3e9;
+            border-radius: 10px;
+            border-style: dotted;
             text-align: center;
             padding: 2rem;
             margin-top: 3rem;
@@ -204,9 +209,13 @@
 
 .adicionar-todos-carrinho {
     margin-left: 10px;
-    background-color: #d4a76a !important;
+    background-color: #0ca02c !important;
     width: 250px;
     height: 50px;
+}
+
+.adicionar-todos-carrinho:hover {
+    background-color: #b51d18 !important;
 }
 
 .produto[data-status="false"] {
