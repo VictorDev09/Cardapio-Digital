@@ -105,6 +105,7 @@ class Estoque {
 const estoque = new Estoque();
 
 function verificarDisponibilidadeNoEstoque(id, quantidade) {
+    
     return estoque.verificarDisponibilidade(id, quantidade);
 }
 
