@@ -43,17 +43,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    botaoAdicionarTodos.addEventListener('click', function () {
+    botaoAdicionarTodos.addEventListener('click', function ()
+    {
         const produtos = document.querySelectorAll('.produto');
         let adicionouAlgo = false;
 
-        produtos.forEach(produtoElemento => {
+        produtos.forEach(produtoElemento =>
+        {
             const quantity = parseInt(produtoElemento.querySelector('.quantity-display').textContent);
             const id = produtoElemento.dataset.id;
 
             if (quantity > 0) {
                 if (!verificarDisponibilidadeNoEstoque(id, quantity)) {
-                    alert(`Desculpe, o produto ${produtoElemento.dataset.nome} não tem estoque suficiente!`);
+                    alert(`Desculpe, o produto ${produtoElemento.dataset.nome} não tem estoque suficiente!\n  Disponível: ${estoque.getProduto(id).Estoque}`);
+
                     return;
                 }
 

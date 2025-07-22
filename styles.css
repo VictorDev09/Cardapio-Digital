@@ -5,10 +5,6 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        body {
-            background-color: #f9f3e9;
-            color: #5a3e2a;
-        }
 
         header {
             background-color: #6b4226;
@@ -19,6 +15,8 @@
             padding: 2rem;
             margin-bottom: 2rem;
         }
+
+
 
         .sacola {
   position: fixed;
@@ -230,4 +228,66 @@
     .menu-items {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+
+
+/* tema escuro e claro */
+
+/* Dark Theme Styles */
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.dark-theme header {
+    background-color: #3d2b1f;
+    color: #f9f3e9;
+}
+
+.dark-theme .menu-item {
+    background-color: #2d2d2d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .item-name {
+    color: #d4a76a;
+}
+
+.dark-theme footer {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.dark-theme .section-title {
+    color: #d4a76a;
+    border-bottom-color: #6b4226;
+}
+
+.dark-theme .item-price {
+    color: #d4a76a;
+}
+
+.dark-theme .quantity-controls button {
+    background-color: #5a3e2a;
+}
+
+.dark-theme .quantity-controls button:hover {
+    background-color: #6b4226;
+}
+
+/* Botão de tema */
+.btn {
+    position: fixed;
+    top: 10px;
+    left: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.btn img {
+    width: 50px;
+    height: 50px;
 }

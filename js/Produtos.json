@@ -1,7 +1,7 @@
 [
     {
         "ID": 1,
-        "Status": true,
+        "Status": false,
         "Nome": "Brigadeiro",
         "valor": "R$ 5,00",
         "Descricao": "trufa caseira de brigadeiro, feita com chocolate 50% cacau para um sabor equilibrado entre doce e intenso. Perfeita para quem aprecia um docinho gourmet sem complicação!",
