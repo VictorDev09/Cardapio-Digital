@@ -48,7 +48,7 @@
         "ID": 6,
         "Status": true,
         "Nome": "Ouro Branco",
-        "valor": "R$ 6,00",
+        "valor": "R$ 5,00",
         "Descricao": "Indulgência suprema! Trufa de chocolate branco cremoso com núcleo de brigadeiro de leite condensado, envolta em uma fina casca crocante de chocolate branco. Texturas que derretem e crispam, num contraste de luxo.",
         "Categorias": "brancos",
         "Estoque": 10
@@ -57,7 +57,7 @@
         "ID": 7,
         "Status": true,
         "Nome": "Confete",
-        "valor": "R$ 6,00",
+        "valor": "R$ 5,00",
         "Descricao": "Diversão em cada mordida! Trufa de chocolate branco cremoso com recheio de brigadeiro de leite condensado recheado com M&M's coloridos, que derretem e surpreendem no paladar. Finalizada com mais confetes de chocolate por fora para um visual festivo. Ideal para quem ama texturas crocantes e sabores lúdicos!",
         "Categorias": "brancos",
         "Estoque": 10
@@ -66,7 +66,7 @@
         "ID": 8,
         "Status": true,
         "Nome": "Maracujá",
-        "valor": "R$ 6,00",
+        "valor": "R$ 5,00",
         "Descricao": "Delicada trufa de mousse de maracujá natural com sementes crocantes, envolta em uma camada fina de chocolate ao leite cremoso. O contraste entre a acidez vibrante da fruta e a doçura suave do chocolate cria um equilíbrio perfeito.",
         "Categorias": "frutas",
         "Estoque": 10
@@ -75,7 +75,7 @@
         "ID": 9,
         "Status": true,
         "Nome": "Limão",
-        "valor": "R$ 6,00",
+        "valor": "R$ 5,00",
         "Descricao": "Delicada trufa de mousse de limão siciliano fresca e vibrante, com raspas da casca para intensificar o aroma cítrico. Envolta em uma fina camada de chocolate ao leite para equilibrar a acidez, finalizada com raspas de limão.",
         "Categorias": "frutas",
         "Estoque": 10
@@ -84,7 +84,7 @@
         "ID": 10,
         "Status": true,
         "Nome": "Oreo",
-        "valor": "R$ 8,00",
+        "valor": "R$ 5,00",
         "Descricao": "Indulgência cremosa e crocante! Trufa feita com mousse de Oreo triturado, envolvida em uma camada de chocolate ao leite para equilibrar a doçura. Finalizada com pedaços de biscoito Oreo por fora para um toque crunchy e visual irresistível.",
         "Categorias": "especiais",
         "Estoque": 10
@@ -93,7 +93,7 @@
         "ID": 11,
         "Status": true,
         "Nome": "Napolitano",
-        "valor": "R$ 8,00",
+        "valor": "R$ 5,00",
         "Descricao": "A tríade perfeita em uma trufa! Camadas distintas de brigadeiro cremoso, mousse de Ninho e recheio de Sensação, harmonizadas em um único bite.",
         "Categorias": "especiais",
         "Estoque": 10
@@ -102,7 +102,7 @@
         "ID": 12,
         "Status": true,
         "Nome": "Café",
-        "valor": "R$ 8,00",
+        "valor": "R$ 5,00",
         "Descricao": "Para os amantes de um sabor intenso e sofisticado! Trufa com brigadeiro cremoso de café, envolvida em uma camada de chocolate ao leite.",
         "Categorias": "especiais",
         "Estoque": 10
@@ -111,7 +111,7 @@
         "ID": 13,
         "Status": true,
         "Nome": "Menta",
-        "valor": "R$ 8,00",
+        "valor": "R$ 5,00",
         "Descricao": "Refrescante e irresistível! Trufa de mousse de menta suave e aromática, envolta em uma camada de chocolate meio amargo para equilibrar o frescor.",
         "Categorias": "especiais",
         "Estoque": 10
